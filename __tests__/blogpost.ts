@@ -27,8 +27,8 @@ describe("Fetch blogposts", () => {
     const year = 2020;
     const month = 1;
     const blogSummary = await getArchivedBlogPosts(year, month);
-    expect(new Date(blogSummary[0].publishedAt).getMonth() + 1).toEqual(month);
-    expect(new Date(blogSummary[0].publishedAt).getFullYear()).toEqual(year);
+    expect(blogSummary[0].publishedAt.getMonth() + 1).toEqual(month);
+    expect(blogSummary[0].publishedAt.getFullYear()).toEqual(year);
     done();
   });
 });

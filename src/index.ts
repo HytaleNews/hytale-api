@@ -1,6 +1,15 @@
 import { PagingBlogPost, BlogPostSummary } from "./types/blogpost";
 import fetch from "node-fetch";
 import { URLSearchParams } from "url";
+require("json.date-extensions");
+
+async function hytaleRequest(path: string, params?: NodeJS.Dict<string | readonly string[]>) {
+  const urlParams = new URLSearchParams(params);
+  const responseJson = await fetch(`https://hytale.com/api/${path}?` + urlParams, {
+    headers: { "User-Agent": "hytale-api/1.0 (+https://github.com/HytaleNews/hytale-api)" },
+  }).then((res) => res.text());
+  return JSON.parseWithDate(responseJson);
+}
 
 /**
  * Fetches all the blogposts but with less information
@@ -8,12 +17,8 @@ import { URLSearchParams } from "url";
  * @param amount the amount of blogposts you want to fetch (From new to old)
  */
 export async function getBlogPosts(limit = 0): Promise<BlogPostSummary[]> {
-  const params = new URLSearchParams({ limit: limit.toString() });
-  const BlogPosts: BlogPostSummary[] = await fetch(`https://hytale.com/api/blog/post/published?` + params).then((res) =>
-    res.json()
-  );
-
-  return BlogPosts;
+  const blogPosts: BlogPostSummary[] = await hytaleRequest("blog/post/published", { limit: limit.toString() });
+  return blogPosts;
 }
 
 /**
@@ -23,10 +28,7 @@ export async function getBlogPosts(limit = 0): Promise<BlogPostSummary[]> {
  * @param month the month of the archive list
  */
 export async function getArchivedBlogPosts(year: number, month: number): Promise<BlogPostSummary[]> {
-  const BlogPosts: BlogPostSummary[] = await fetch(
-    `https://hytale.com/api/blog/post/archive/${year}/${month}`
-  ).then((res) => res.json());
-
+  const BlogPosts: BlogPostSummary[] = await hytaleRequest(`blog/post/archive/${year}/${month}`);
   return BlogPosts;
 }
 
@@ -35,9 +37,6 @@ export async function getArchivedBlogPosts(year: number, month: number): Promise
  * @param slug The slug of the blog
  */
 export async function getBlogPost(slug: string): Promise<PagingBlogPost> {
-  const BlogPost: PagingBlogPost = await fetch(`https://hytale.com/api/blog/post/slug/${slug}`).then((res) =>
-    res.json()
-  );
-
+  const BlogPost: PagingBlogPost = await hytaleRequest(`blog/post/slug/${slug}`);
   return BlogPost;
 }
