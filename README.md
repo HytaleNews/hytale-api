@@ -10,11 +10,22 @@
 ![TS types](https://badgen.net/npm/types/hytale-api)
 ![license](https://badgen.net/npm/license/hytale-api)
 
+
+[Npm package](https://www.npmjs.com/package/hytale-api)
+
 </div>
 
-This is an TypeScript client wrapper for the Hytale API that works on the browser as well as on the NodeJS side.
+<br/>
+
+This is an unofficial TypeScript client wrapper for the Hytale API that works on the browser as well as on the NodeJS side.
 
 > **DISCLAMER** All API endpoints disclosed here are found by my own findings and have not been made public by Hytale nor Hypixel Studios Limited. This means that those API endspoints might not be intended to be used in anyway by 3rd parties nor do I grant you permissions too. I am in no way responsible for anything that might happen to you for using this library or for anything that you might use from this library. use it at your own risk.
+
+# How to install?
+
+Npm: `npm i hytale-api`
+
+Yarn: `yarn add hytale-api`
 
 # Usage
 
