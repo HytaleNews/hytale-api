@@ -1,6 +1,6 @@
 {
   "name": "hytale-api",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "An SDK that communicate with the Hytale API",
   "repository": "https://github.com/HytaleNews/hytale-api",
   "author": "Nick Verbraecken",

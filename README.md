@@ -3,8 +3,9 @@
 <div align="center">
 
 ![npm version](https://badgen.net/npm/v/hytale-api)
+![install size](https://badgen.net/bundlephobia/minzip/hytale-api)
 ![commit amount](https://badgen.net/github/commits/hytalenews/hytale-api/)
-![Install size](https://badgen.net/github/last-commit/hytalenews/hytale-api)
+![last commit](https://badgen.net/github/last-commit/hytalenews/hytale-api)
 ![dependencies](https://img.shields.io/david/hytalenews/hytale-api)
 ![devdependencies](https://img.shields.io/david/dev/hytalenews/hytale-api)
 ![TS types](https://badgen.net/npm/types/hytale-api)
