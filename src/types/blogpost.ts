@@ -29,12 +29,12 @@ export interface CoverImage {
    */
   __v: number;
   /**
-   * Assuming this is a resouce ID
+   * Assuming this is a resource ID
    * @see https://docs.aws.amazon.com/mediaconvert/latest/ug/encrypting-content.html
    */
   contentId: string;
   /**
-   * The catagory the image is used at
+   * The category the image is used at
    */
   contentType: string;
 }
@@ -42,7 +42,7 @@ export interface CoverImage {
 export type Blog = {
   /**
    * Marking the blogpost as Hot news
-   * @note As of making this documentation, Hytale hasnt been activly updating this value.
+   * @note As of making this documentation, Hytale hasn't been actively updating this value.
    */
   featured: boolean;
   /**
@@ -87,7 +87,7 @@ export type Blog = {
  */
 export interface BlogPost extends Blog {
   /**
-   * The catagories the blog is been posted to
+   * The categories the blog has been posted to
    */
   publishedTo: string[];
   /**
@@ -96,7 +96,7 @@ export interface BlogPost extends Blog {
   disableCfAutoplay: boolean;
   /**
    * The entire blogpost
-   * @Note May contail HTML tags
+   * @Note May contain HTML tags
    */
   body: string;
   /**
@@ -114,7 +114,7 @@ export interface BlogPostSummary extends Blog {
 }
 
 /**
- * Contains a optional next and previous variable that both return {@link BlogPost} if found
+ * Contains optional next and previous variables that both return {@link BlogPost} if found
  */
 export interface PagingBlogPost extends BlogPost {
   previous?: BlogPost;
