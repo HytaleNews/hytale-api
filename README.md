@@ -1,6 +1,6 @@
 # **Hytale API**
 
-<div style="font-style: italic; text-align: center;" markdown="1">
+<div align="center">
 
 ![npm version](https://badgen.net/npm/v/hytale-api)
 ![commit amount](https://badgen.net/github/commits/hytalenews/hytale-api/)
