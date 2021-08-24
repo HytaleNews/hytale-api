@@ -1,5 +1,7 @@
 # **Hytale API**
 
+<div style="font-style: italic; text-align: center;" markdown="1">
+
 ![npm version](https://badgen.net/npm/v/hytale-api)
 ![commit amount](https://badgen.net/github/commits/hytalenews/hytale-api/)
 ![Install size](https://badgen.net/github/last-commit/hytalenews/hytale-api)
@@ -8,6 +10,8 @@
 ![donwloads month](https://badgen.net/npm/dm/hytale-api)
 ![TS types](https://badgen.net/npm/types/hytale-api)
 ![license](https://badgen.net/npm/license/hytale-api)
+
+</div>
 
 This is an TypeScript client wrapper for the Hytale API that works on the browser as well as on the NodeJS side.
 
