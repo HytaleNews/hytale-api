@@ -1,6 +1,6 @@
 {
   "name": "hytale-api",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "An SDK that communicate with the Hytale API",
   "repository": "https://github.com/HytaleNews/hytale-api",
   "author": "Nick Verbraecken",
@@ -14,6 +14,7 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "devDependencies": {
+    "@types/jest": "^27.0.1",
     "@types/node-fetch": "^2.5.12",
     "@typescript-eslint/eslint-plugin": "^4.29.3",
     "@typescript-eslint/parser": "^4.29.3",
