@@ -76,8 +76,7 @@ export type Blog = {
    */
   createdAt: Date;
   /**
-   * The mongoose versionKey of the document
-   * @see https://stackoverflow.com/a/18956020/7906244
+   * The slug of the blogpost, is used in the url path to locate the blogpost
    */
   slug: string;
 };
