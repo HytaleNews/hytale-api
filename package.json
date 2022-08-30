@@ -1,6 +1,6 @@
 {
   "name": "hytale-api",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "An SDK that communicate with the Hytale API",
   "repository": "https://github.com/HytaleNews/hytale-api",
   "author": "Nick Verbraecken",
@@ -9,6 +9,7 @@
   "scripts": {
     "test": "eslint . --fix&&jest",
     "prepublishOnly": "npm run test&&npm run build",
+    "publish": "npm run test&&npm run build&&npm publish",
     "build": "tsc"
   },
   "main": "dist/index.js",
