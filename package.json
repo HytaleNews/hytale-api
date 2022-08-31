@@ -52,7 +52,7 @@
   },
   "dependencies": {
     "json.date-extensions": "^1.2.2",
-    "node-fetch": "^2.6.1",
+    "node-fetch": "^3.2.10",
     "tslib": "^2.3.1"
   }
 }
